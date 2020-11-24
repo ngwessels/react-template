@@ -1,64 +1,15 @@
-//firebse functions
-const functions = require('firebase-functions');
+const { https } = require('firebase-functions');
+const { default: next } = require('next');
 
-//firebase admin
-const admin = require('firebase-admin');
+const isDev = process.env.NODE_ENV !== 'production';
 
-//Environment
-require('dotenv').config();
+const server = next({
+    dev: isDev,
+    //location of .next generated after running -> yarn build
+    conf: { distDir: '.next' },
+});
 
-//Function Variables
-const { keys, reports } = require('./functions/index');
-
-//path
-const path = require('path');
-
-
-//firebase initializeApp
-if (keys.test) {
-    //testing
-    admin.initializeApp({
-        // credential: admin.credential.cert(serviceAccountTest),
-        apiKey: ,
-        authDomain: ,
-        databaseURL: ,
-        projectId: ,
-        storageBucket:,
-        messagingSenderId:,
-        appId:,
-        measurementId: 
-    });
-} else {
-    //Live
-    admin.initializeApp({
-        // credential: admin.credential.cert(serviceAccount),
-        apiKey: ,
-        authDomain: ,
-        databaseURL: ,
-        projectId: ,
-        storageBucket: ,
-        messagingSenderId:,
-        appId:,
-        measurementId: 
-    });
-}
-
-
-//RunTimeOptions
-const RunTimeOptions = {
-    timeoutSeconds: 30,
-    memory: '2GB'
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+const nextjsHandle = server.getRequestHandler();
+exports.nextServer = https.onRequest((req, res) => {
+    return server.prepare().then(() => nextjsHandle(req, res));
+});

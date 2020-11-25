@@ -28,7 +28,7 @@ class index extends React.Component {
       <div>
         {this.props.ssrWorking ? (
           <div>
-            <h2> Deployment Successful of Nextjs Application with SSR on Firebase.</h2>
+            {/* <h2> Deployment Successful of Nextjs Application with SSR on Firebase.</h2> */}
           </div>
         ) : (
             <h2>SSR not working</h2>

@@ -10,7 +10,8 @@ import { css, keyframes } from 'emotion'; //CSS and Animations
 //Axios
 import axios from 'axios';
 
-import Dropdown from './File/index';
+import Dropdown from './Button/index';
+import Mobile from './Mobile/index.jsx';
 
 //Functions
 // import f from '../../functions';
@@ -70,7 +71,8 @@ class MyApp extends React.Component {
     render() {
         return (
             <div id={'githubNav'} className={`${this.renderCSS()}`}>
-                <Dropdown
+                <Mobile />
+                {/* <Dropdown
                     title='Projects'
                     position={'left'}
                     buttonClassName={'buttonStyle'}
@@ -117,23 +119,14 @@ class MyApp extends React.Component {
 
                         )
                     })}
-                    {/* <Dropdown.Item onClick={() => alert('is called')}>Item 1</Dropdown.Item>
-                    <Dropdown.Item>
-                        Item 2
-                        <Dropdown.Submenu>
-                            <Dropdown.Item>Subitem 1</Dropdown.Item>
-                            <Dropdown.Item>Subitem 2</Dropdown.Item>
-                        </Dropdown.Submenu>
-                    </Dropdown.Item>
-                    <Dropdown.Item>Item 3</Dropdown.Item> */}
-                </Dropdown>
+                </Dropdown> */}
             </div>
         )
     }
 
     renderCSS = () => {
         return css({
-            marginLeft: 400,
+            // marginLeft: 400,
             '.buttonStyle': {
                 backgroundColor: 'red'
             }

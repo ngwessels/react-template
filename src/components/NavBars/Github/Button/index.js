@@ -30,7 +30,7 @@ const Dropdown = (props) => {
       return;
     }
 
-    setOpen(!isOpen);
+    setOpen(true);
   };
 
   return (
@@ -48,6 +48,7 @@ const Dropdown = (props) => {
         )}
         disabled={props.isDisabled}
         tabIndex={0}
+        onMouseOver={handleButtonOnClick}
         onClick={handleButtonOnClick}
       >
         {props.title}

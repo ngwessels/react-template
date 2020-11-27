@@ -9,7 +9,7 @@ import NavBarGitHub from './../components/NavBars/Github';
 
 //Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './../components/NavBars/Github/Mobile/styling.css'
+import './../components/NavBars/Github/Mobile/styling.scss';
 
 
 class MyApp extends App {

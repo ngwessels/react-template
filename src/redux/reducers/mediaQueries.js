@@ -1,5 +1,5 @@
 //constants
-import c from './../constants';
+import c from './../../constants';
 
 
 const mq = [

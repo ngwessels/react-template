@@ -3,5 +3,5 @@ module.exports = withWorkers({
     workerLoaderOptions: { inline: 'no-fallback' },
     webpack: (config) => {
         return config;
-    },
+    }
 })

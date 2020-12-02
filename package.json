@@ -22,17 +22,26 @@
     "firebase": "^8.1.1",
     "firebase-admin": "^9.4.1",
     "firebase-functions": "^3.11.0",
+    "gsap": "^3.5.1",
     "jquery": "^3.5.1",
+    "knockout": "^3.5.1",
     "next": "9.5.3",
     "next-redux-wrapper": "^6.0.2",
     "next-transpile-modules": "^4.1.0",
     "react": "16.13.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "16.13.1",
+    "react-knockout": "^1.0.6",
     "react-multilevel-dropdown": "^1.0.5",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "sass": "^1.29.0",
+    "snapsvg": "^0.5.1",
+    "snapsvg-cjs": "0.0.6",
+    "some-module": "0.0.3",
     "worker-loader": "^3.0.5"
+  },
+  "devDependencies": {
+    "imports-loader": "^1.2.0"
   }
 }

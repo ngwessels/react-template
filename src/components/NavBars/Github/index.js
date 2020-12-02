@@ -124,7 +124,6 @@ class MyApp extends React.Component {
                                         </Dropdown.Submenu>
                                     </Dropdown.Item>
                                 </div>
-
                             )
                         })}
                     </Dropdown>
@@ -140,6 +139,7 @@ class MyApp extends React.Component {
             '.buttonStyle': {
                 backgroundColor: 'red'
             },
+            position: 'absolute',
             [mq[0]]: {
                 '.desktop': {
                     display: 'none'

@@ -22,7 +22,6 @@ import SlowMo, { TweenMax, Power0, Power2, Power4, Power1, Elastic, gsap } from 
 import MotionPathPlugin from 'gsap';
 gsap.registerPlugin(MotionPathPlugin)
 
-// declare const Snap: any;
 
 //components
 
@@ -730,7 +729,6 @@ class index extends React.Component {
         }
 
         function changeWeather(weather) {
-            // const weather = { type: 'wind', class: '', intensity: 0.5, name: 'Wind' }
             if (weather.data) weather = weather.data;
             reset();
             currentWeather = weather;
@@ -901,7 +899,7 @@ class index extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id={'weatherCard'}>
                 <div className="background">
                     <div className="container">
                         <svg id="back">
